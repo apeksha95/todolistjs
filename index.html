@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+     <!---Css--->
+	<link rel="stylesheet" href="style.css">
+	
+         <title>To-Do-List</title>
+  </head>
+  <body>
+  <nav class="navbar">
+  <h1>To-Do-List</h1>
+  </nav>
+  
+  <div class="container-fluid">
+ 
+  <div class="container">
+  <div class="row ">
+  <div class="col-md-6"> 
+<div class="input-group">
+    
+  <input type="text" class="form-control" placeholder="Add Item.." id="userInput" maxlength="27" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary btn-success" style="color:#fff;" id="enter" type="button">Add</button>
+  </div>
+ </div>		
+ </div>
+   <div class="col-md-6">
+   <h5 id="title"> </h5>
+   <div class="listItems col-12">
+   <ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+   </ul>
+  </div>
+  </div>
+  </div>
+  </div>  
+  </div>
+  
+   
+   
+   <script type="text/javascript" src="todo.js"></script>
+   <script>
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = dd + '/' + mm + '/' + yyyy;
+   document.getElementById("title").innerHTML = today;
+   </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
